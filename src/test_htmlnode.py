@@ -23,7 +23,7 @@ class TestLeafNode(unittest.TestCase):
 
         #self.assertEqual(node1.to_html,)
         self.assertEqual(node2.to_html(),"<p>This is a paragraph of text.</p>")
-        self.assertEqual(node3.to_html(),"<a href='https://www.google.com'>Click me!</a>")
+        self.assertEqual(node3.to_html(),'<a href="https://www.google.com">Click me!</a>')
 
 if __name__ == "__main__":
     unittest.main()

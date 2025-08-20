@@ -23,7 +23,7 @@ class HTMLNode:
     
 class LeafNode(HTMLNode):
     def __init__(self, tag, value, props = None):
-        super().__init__(tag, value, props)
+        super().__init__(tag, value,None, props)
 
     def to_html(self):
         prop_text = ""
@@ -36,5 +36,6 @@ class LeafNode(HTMLNode):
         if self.props:
             prop_text = self.props_to_html()
         print(f"Prop is {prop_text}")
+        
         return f"<{self.tag}{prop_text}>{self.val}</{self.tag}>"
         
